@@ -36,3 +36,43 @@
     transform: rotate(360deg);
   }
 }
+
+.saludo {
+  font-size: 20px;
+  margin-top: 10%;
+}
+
+.saludo:hover {
+  color: rgb(233, 0, 0)
+}
+
+.card {
+  margin: 1pc;
+}
+
+.containercard {
+  margin: 1pc;
+  display: flex;
+
+}
+
+.cardcontentdiv {
+  height: 264px;
+}
+
+.brandloco {
+  color: rgb(207, 207, 207);
+  text-decoration: none;
+  
+}
+
+.brandloco:hover{
+  color: white;
+}
+
+.caradehome {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: 18% 0%;
+}
