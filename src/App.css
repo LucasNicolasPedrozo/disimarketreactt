@@ -50,6 +50,26 @@
   margin: 1pc;
 }
 
+.cardCart{
+  margin: 1pc;
+  display: flex;
+  justify-content: space-around;
+}
+
+.spanNumerito {
+  font-family: 'Courier New', Courier, monospace;
+  font-style: bold;
+  font-size: 18px;
+}
+
+.divSpanNumerito {
+  align-items: center;
+}
+
+.typoTotalCarrito {
+  margin: 10px !important;
+}
+
 .containercard {
   margin: 1pc;
   display: flex;
@@ -75,4 +95,27 @@
   flex-direction: row;
   justify-content: space-around;
   margin: 18% 0%;
+}
+
+.div1nav {
+  display: flex;
+}
+
+.cardContent {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 16px;
+}
+
+.typographyColor {
+  color: green;
+}
+
+.cardActionsnashe {
+  display: flex;
+  justify-content: space-around;
+}
+
+.fontletrita {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }

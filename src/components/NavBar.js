@@ -51,26 +51,24 @@ export default function ButtonAppBar() {
       );
   };
   return (
-    <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static">
-        <Toolbar>
-          <IconButton
-            size="large"
-            edge="start"
-            color="inherit"
-            aria-label="menu"
-            sx={{ mr: 2 }}
-          >
-            <ShoppingCartIcon />
-          </IconButton>
+        <Toolbar sx={{ justifyContent: 'space-between' }}>
+          <div class="div1nav">
           <Typography className='brandloco' component={Link} to="/" variant="h6" >
             DISIMARKET
           </Typography>
+
           <Button component={Link} to = "/" color="inherit">HOME</Button>
           {menu()}
           <Button component={Link} to = "/item" color="inherit">ITEMS</Button>
+          </div>
+
+          <div>
+            <Link to="/cart">
+              <ShoppingCartIcon />
+            </Link>
+          </div>
         </Toolbar>
       </AppBar>
-    </Box>
   );
 };
