@@ -2,7 +2,7 @@ import { useParams } from 'react-router-dom';
 import MediaCard from './Card';
 import { useState } from 'react';
 import { useEffect } from 'react';
-import getItems from '../utils/useFirestore';
+import { getItems } from '../utils/useFirestore';
 
 function DetalleProducto() {
   const { id } = useParams();

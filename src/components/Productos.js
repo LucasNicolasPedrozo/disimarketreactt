@@ -1,7 +1,7 @@
 import MediaCard from './Card';
 import { useContext } from 'react';
 import { CartContext } from './CartContext';
-import getItems from '../utils/useFirestore';
+import { getItems } from '../utils/useFirestore';
 import { useState } from 'react';
 import { useEffect } from 'react';
 

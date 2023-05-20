@@ -8,9 +8,7 @@ import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import Snackbar from '@mui/material/Snackbar';
 import MuiAlert from '@mui/material/Alert';
-import { getFirestore, collection, getDocs } from 'firebase/firestore';
-import { firestore } from '../firebase/firebase.config'; // Importa el servicio de Firestore previamente configurado
-import getItems from '../utils/useFirestore';
+import MyForm from './MyForm';
 
 function Cart() {
   const { cartItems, removeItem, clearCart, addToCart, restToCart, totalPrice } = useContext(CartContext);
@@ -20,8 +18,9 @@ function Cart() {
     return <MuiAlert elevation={6} ref={ref} variant="filled" {...props} />;
   });
 
-  const handleClick = () => {
-        setOpen(true);
+  const handleClick = (initialProducts) => {
+        // setOpen(true);
+      
 
     };
     
@@ -82,23 +81,29 @@ function Cart() {
                 </CardContent>
               </Card>
               )})}
+          <Card className="" sx={{ maxWidth: 900 }}>
+                <CardContent className="cardCart">
+              <MyForm clearCart = { clearCart } initialProducts = { cartItems } totalPrice = { calculateTotalPrice() } />
+</CardContent>
+</Card>
                 <CardActions>
-                <Typography className='typoTotalCarrito'>TOTAL: {calculateTotalPrice()}</Typography>
-                <Button color='warning' variant='outlined' onClick={clearCart}>
+                {/* <Typography className='typoTotalCarrito'>TOTAL: {calculateTotalPrice()}</Typography> */}
+                {/* <Button color='warning' variant='outlined' onClick={clearCart}>
                   VACIAR DISICARRO
                 </Button>
                 <Button color = 'success'
                 variant = 'outlined'
                 onClick = {() => {
-                      handleClick();
+                      // handleClick(cartItems, calculateTotalPrice);
                 }}>
                   FINALIZAR COMPRA 
-                  </Button>
-                <Snackbar open={open} autoHideDuration={3000} onClose={handleClose}>
+                  </Button> */}
+  
+                {/* <Snackbar open={open} autoHideDuration={3000} onClose={handleClose}>
                   <Alert onClose={handleClose} severity="success" sx={{ width: '100%' }}>
                     SU COMPRA FUE REALIZADA CON ÉXITO!
                   </Alert>
-                </Snackbar>
+                </Snackbar> */}
                 </CardActions>
           </Card></>
       )}
